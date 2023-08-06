@@ -1,10 +1,6 @@
----
-- name: Copy File to Nodes
-  hosts: all
+- hosts: 127.0.0.1
   gather_facts: no
-  become: true
   tasks:
-    - name: Copy sample text file to both nodes
-      copy:
-        src: /home/ubuntu/sample1.txt
-        dest: /home/ubuntu/sample1.txt
+    - name: Print Hello, World
+      debug:
+        msg: "Hello, World!"
